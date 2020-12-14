@@ -20,6 +20,12 @@ async def ping(ctx) :
 async def whoami(ctx) :
     await ctx.send(f"You are {ctx.message.author.name}")
 
+
+@client.command(name="givekiss")
+async def whoami(ctx) :
+    await ctx.send(f"Aww I Love You {ctx.message.author.name}, Here Take A Kiss *Smootch*")
+
+
 @client.command()
 async def clear(ctx, amount=3) :
     await ctx.channel.purge(limit=amount)
