@@ -27,7 +27,7 @@ class Utility(commands.Cog):
 
     @commands.command(name="imfeelinghorny")
     async def imfeelinghorny(self,ctx, *, member: discord.Member = None) :
-        """Gives you a sweet kiss! Yummy"""
+        """Are you feeling little outta control? Ask me!"""
 
         member = member or ctx.author
         await ctx.send(getImFeeling(member.name))
