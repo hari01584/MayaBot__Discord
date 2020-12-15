@@ -19,7 +19,7 @@ def getImFeeling(name):
     if(irand==6):
         return ("You suck {}, you dont have what it takes to be the best men satisfying me!".format(name))
     if(irand==7):
-        return ("You aint handsome.. you are ugly ".format(name))
+        return ("You aint handsome.. you are ugly {}".format(name))
     if(irand==8):
         return "Hey handsome {}, would you like to go on a date?".format(name)
     if(irand==9):
