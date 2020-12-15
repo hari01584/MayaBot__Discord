@@ -15,9 +15,10 @@ class Utility(commands.Cog):
 
 
     @commands.command(name="givekiss")
-    async def givekiss(self,ctx) :
+    async def givekiss(self,ctx, *, member: discord.Member = None) :
         """Gives you a sweet kiss! Yummy"""
-        await ctx.send(f"Awww I Love You {ctx.message.author.name}, Here Take A Kiss *Smootch*")
+        member = member or ctx.author
+        await ctx.send(f"Awww I Love You {member.name}, Here Take A Kiss *Smootch*")
 
 
 
