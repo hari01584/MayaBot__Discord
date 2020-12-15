@@ -1,35 +1,29 @@
 import discord
 from discord.ext import commands
 from loadToken import loadToken
-import os
 
-client = commands.Bot(command_prefix=".")
+import os
+from pretty_help import PrettyHelp
+
+
+from COG.Economy import Economy
+from COG.Utility import Utility
+
+client = commands.Bot(command_prefix=".",help_command=PrettyHelp())
 token = loadToken();
 
+# TODO: ADD ALL COG HERE!!
+
+client.add_cog(Economy())
+client.add_cog(Utility())
+
+#
 
 @client.event
 async def on_ready() :
     await client.change_presence(status = discord.Status.idle, activity = discord.Game("Listening to .help"))
     print("I am online")
 
-@client.command()
-async def ping(ctx) :
-    await ctx.send(f"🏓 Pong with {str(round(client.latency, 2))}")
-
-
-@client.command(name="whoami", help = "feeling lost? let me tell your identity!")
-async def whoami(ctx) :
-    await ctx.send(f"You are {ctx.message.author.name}")
-
-
-@client.command(name="givekiss", help="A lovely kiss can cure any problem!")
-async def whoami(ctx) :
-    await ctx.send(f"Awww I Love You {ctx.message.author.name}, Here Take A Kiss *Smootch*")
-
-
-@client.command()
-async def clear(ctx, amount=3) :
-    await ctx.channel.purge(limit=amount)
 
 
 client.run(token)
