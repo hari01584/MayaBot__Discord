@@ -16,14 +16,15 @@ async def on_ready() :
 async def ping(ctx) :
     await ctx.send(f"🏓 Pong with {str(round(client.latency, 2))}")
 
-@client.command(name="whoami")
+
+@client.command(name="whoami", help = "feeling lost? let me tell your identity!")
 async def whoami(ctx) :
     await ctx.send(f"You are {ctx.message.author.name}")
 
 
-@client.command(name="givekiss")
+@client.command(name="givekiss", help="A lovely kiss can cure any problem!")
 async def whoami(ctx) :
-    await ctx.send(f"Aww I Love You {ctx.message.author.name}, Here Take A Kiss *Smootch*")
+    await ctx.send(f"Awww I Love You {ctx.message.author.name}, Here Take A Kiss *Smootch*")
 
 
 @client.command()
