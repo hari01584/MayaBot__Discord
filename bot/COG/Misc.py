@@ -21,10 +21,10 @@ def getImFeeling(name):
     if(irand==7):
         return ("You aint handsome.. you are ugly ".format(name))
     if(irand==8):
-        return "Hey handsome {}, would you like to go on a date?"
+        return "Hey handsome {}, would you like to go on a date?".format(name)
     if(irand==9):
-        return "Dont come near me, you smell stinks {} ASSHOLE!!"
+        return "Dont come near me, you smell stinks {} ASSHOLE!!".format(name)
     if(irand==10):
-        return "Braahhhh I dont know who you are, but you better shut up, because i dont like you {}"
+        return "Braahhhh I dont know who you are, but you better shut up, because i dont like you {}".format(name)
 
     return irand
