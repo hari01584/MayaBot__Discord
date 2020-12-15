@@ -14,8 +14,8 @@ token = loadToken();
 
 # TODO: ADD ALL COG HERE!!
 
-client.add_cog(Economy())
-client.add_cog(Utility())
+client.add_cog(Economy(client))
+client.add_cog(Utility(client))
 
 #
 

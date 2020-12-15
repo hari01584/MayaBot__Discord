@@ -3,10 +3,14 @@ from discord.ext import commands
 
 class Utility(commands.Cog):
     """Utilities That May Serve You"""
+    def __init__(self, client):
+        self.client = client
+
+
     @commands.command(name="ping")
     async def ping(self,ctx) :
         """Check your server latency"""
-        await ctx.send(f"🏓 Pong with {str(round(client.latency, 2))}")
+        await ctx.send(f"🏓 Pong with {str(round(self.client.latency, 2))}")
 
 
 
