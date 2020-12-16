@@ -35,3 +35,13 @@ class Naughty_Fun(commands.Cog):
 
         member = member or ctx.author
         await ctx.send(random.choice(BURN_LIGHT_LIST).format(member.name))
+
+
+
+    @commands.command(name="roast")
+    async def roast(self,ctx, *, member: discord.Member = None) :
+        """Wana see that burning shit? ask me!"""
+
+        member = member or ctx.author
+        #await ctx.send(random.choice(ROAST_LIST).format(member.name))
+        await ctx.send("Coming Soon..")
