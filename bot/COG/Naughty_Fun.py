@@ -5,7 +5,7 @@ from COG.Misc import getImFeeling
 
 
 class Naughty_Fun(commands.Cog):
-    """Utilities That May Serve You"""
+    """Ahh we got some fun commands for ya!"""
     def __init__(self, client):
         self.client = client
 
