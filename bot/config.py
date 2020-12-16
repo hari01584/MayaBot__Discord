@@ -22,7 +22,7 @@ BURN_LIGHT_LIST = [
                     "Boy you are freaking weird, i dont love your no shit, stay away you motherfker {}",
                     "C'mon {}, you are really born with donkey brain, can't you do even that??",
                     "Uhh, you {} piece of shit, go get a life first before talking to me",
-                    "Did you heard that rumour?? {} Peed on their pants on very first night",
+                    "Did you heard that rumour?? {} Peed in their pants on very first night",
                     "I want no beef with ya, but you really disgusts me {}",
                     "Ohh you are so nice guy, let me be your belle! {}",
                     "Your kindness is unparalleled, no one even matches close to you!! {}",
