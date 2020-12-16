@@ -8,6 +8,7 @@ from pretty_help import PrettyHelp
 
 from COG.Economy import Economy
 from COG.Utility import Utility
+from COG.Naughty_Fun import Naughty_Fun
 
 client = commands.Bot(command_prefix=".",help_command=PrettyHelp())
 token = loadToken();
@@ -16,7 +17,7 @@ token = loadToken();
 
 client.add_cog(Economy(client))
 client.add_cog(Utility(client))
-
+client.add_cog(Naughty_Fun(client))
 #
 
 @client.event
