@@ -32,7 +32,9 @@ BURN_LIGHT_LIST = [
                     "{}, your personality mermerized me, let me be your servant",
                     ]
 
-
+BDAY_LIST = [
+                    "Happy birthday motherfker {}, Hope your lugai leaves you today!",
+                    "BRUH Happy Bday BSDK {}",]
 
 ROAST_LIST = [
                     "",

@@ -6,6 +6,7 @@ from COG.Misc import getImFeeling
 import random
 from config import FEELING_HORNY_LIST
 from config import BURN_LIGHT_LIST
+from config import BDAY_LIST
 
 class Naughty_Fun(commands.Cog):
     """Ahh we got some fun commands for ya!"""
@@ -19,6 +20,13 @@ class Naughty_Fun(commands.Cog):
         member = member or ctx.author
         await ctx.send(f"Awww I Love You {member.name}, Here Take A Kiss *Smootch*")
 
+
+    @commands.command(name="happybirthday")
+    async def happybirthday(self,ctx, *, member: discord.Member = None) :
+        """Birthhday? Let me wish for you!"""
+
+        member = member or ctx.author
+        await ctx.send(random.choice(BDAY_LIST).format(member.name))
 
 
     @commands.command(name="imfeelinghorny")
