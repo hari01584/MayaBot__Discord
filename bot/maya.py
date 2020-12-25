@@ -11,7 +11,7 @@ lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
 from keras.models import load_model
-model = load_model('AstraAstolosis\chatbot_model.h5')
+model = load_model('.\AstraAstolosis\chatbot_model.h5')
 
 
 from COG.Economy import Economy
