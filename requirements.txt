@@ -2,3 +2,4 @@ discord.py==1.5.1
 discord-pretty-help==1.2.0
 chatterbot
 chatterbot_corpus
+spacy
