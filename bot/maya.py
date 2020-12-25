@@ -11,6 +11,10 @@ from COG.Utility import Utility
 from COG.Naughty_Fun import Naughty_Fun
 
 from ErrorHandling.ErrorHandler import ErrorHandler
+
+import spacy
+spacy.cli.download("en")
+
 from Maxon.model_create import maxon
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("."),help_command=PrettyHelp())
