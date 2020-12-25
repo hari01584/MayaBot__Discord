@@ -1,4 +1,4 @@
-from model import maxon
+from Maxon.model import maxon
 
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
