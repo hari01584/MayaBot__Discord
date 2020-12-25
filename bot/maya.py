@@ -11,7 +11,7 @@ from COG.Utility import Utility
 from COG.Naughty_Fun import Naughty_Fun
 
 from ErrorHandling.ErrorHandler import ErrorHandler
-from AstraAstolosis.chatUtils import chatbot_response
+#from AstraAstolosis.chatUtils import chatbot_response
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("."),help_command=PrettyHelp())
 token = loadToken();
@@ -34,7 +34,7 @@ async def on_ready() :
 async def on_message(message):
     if client.user.mentioned_in(message):
         text = message.clean_content.replace("@Maya Maxon","")
-        await message.channel.send(chatbot_response(text))
+        #await message.channel.send(chatbot_response(text))
 
 
     await client.process_commands(message)
