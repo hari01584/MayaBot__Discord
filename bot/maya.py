@@ -12,7 +12,15 @@ from COG.Naughty_Fun import Naughty_Fun
 
 from ErrorHandling.ErrorHandler import ErrorHandler
 
-import AstraAstolosis.train_chatbot
+import nltk
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+import pickle
+import numpy as np
+
+from keras.models import load_model
+model = load_model('chatbot_model.h5')
+
 
 #from AstraAstolosis.chatUtils import chatbot_response
 
