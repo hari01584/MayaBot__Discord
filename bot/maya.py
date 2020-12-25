@@ -14,6 +14,7 @@ from ErrorHandling.ErrorHandler import ErrorHandler
 
 import spacy
 spacy.cli.download("en")
+spacy.load('en_core_web_sm')
 
 from Maxon.model_create import maxon
 
