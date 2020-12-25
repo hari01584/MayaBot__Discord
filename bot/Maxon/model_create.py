@@ -3,7 +3,7 @@ from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
-maxon = ChatBot(name='Maxon', read_only=False,
+maxon = ChatBot(name='Maxon', read_only=True,
                  logic_adapters=['chatterbot.logic.MathematicalEvaluation',
                                  'chatterbot.logic.BestMatch'])
 
