@@ -1,5 +1,5 @@
 discord.py==1.5.1
 discord-pretty-help==1.2.0
-tensorflow
-keras
+tensorflow==2.4.0
+Keras==2.4.3
 nltk
