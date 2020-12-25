@@ -5,6 +5,13 @@ from loadToken import loadToken
 import os
 from pretty_help import PrettyHelp
 
+import nltk
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+import pickle
+import numpy as np
+
+
 
 from COG.Economy import Economy
 from COG.Utility import Utility
