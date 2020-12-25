@@ -22,7 +22,7 @@ client.add_cog(Economy(client))
 client.add_cog(Utility(client))
 client.add_cog(Naughty_Fun(client))
 
-client.add_cog(ErrorHandler(client))
+#client.add_cog(ErrorHandler(client))
 #
 
 @client.event

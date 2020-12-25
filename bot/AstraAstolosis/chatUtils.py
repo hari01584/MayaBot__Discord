@@ -1,5 +1,4 @@
 import nltk
-nltk.data.path.append('./nltk_data/')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
