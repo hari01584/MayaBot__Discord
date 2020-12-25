@@ -1,5 +1,4 @@
 import nltk
-
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import json

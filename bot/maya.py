@@ -5,20 +5,15 @@ from loadToken import loadToken
 import os
 from pretty_help import PrettyHelp
 
-import nltk
-from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
-import pickle
-import numpy as np
-from keras.models import load_model
-model = load_model('.\AstraAstolosis\chatbot_model.h5')
-
 
 from COG.Economy import Economy
 from COG.Utility import Utility
 from COG.Naughty_Fun import Naughty_Fun
 
 from ErrorHandling.ErrorHandler import ErrorHandler
+
+import AstraAstolosis.train_chatbot
+
 #from AstraAstolosis.chatUtils import chatbot_response
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("."),help_command=PrettyHelp())
