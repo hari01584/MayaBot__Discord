@@ -38,7 +38,7 @@ class Naughty_Fun(commands.Cog):
 
 
     @commands.command(name="burn")
-    async def burn(self,ctx, *, member: discord.Member = None) :
+    async def burn(self,ctx, *, member: discord.Member = None, tname=None) :
         """You might get a roast, or a praise.. Who knows!!"""
 
         member = member or ctx.author
