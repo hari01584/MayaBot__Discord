@@ -16,7 +16,7 @@ import spacy
 spacy.cli.download("en")
 spacy.load('en_core_web_sm')
 
-from Maxon.model_create import maxon
+from Maxon.model import maxon
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("."),help_command=PrettyHelp())
 token = loadToken();
