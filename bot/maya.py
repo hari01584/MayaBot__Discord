@@ -5,20 +5,11 @@ from loadToken import loadToken
 import os
 from pretty_help import PrettyHelp
 
-
 from COG.Economy import Economy
 from COG.Utility import Utility
 from COG.Naughty_Fun import Naughty_Fun
 
 from ErrorHandling.ErrorHandler import ErrorHandler
-
-import spacy
-spacy.cli.download("en")
-spacy.load('en_core_web_sm')
-
-from Maxon.model import maxon
-
-import Maxon.train
 
 client = commands.Bot(command_prefix=commands.when_mentioned_or("."),help_command=PrettyHelp())
 token = loadToken();
@@ -41,7 +32,7 @@ async def on_ready() :
 async def on_message(message):
     if client.user.mentioned_in(message):
         text = message.clean_content.replace("@Maya Maxon","")
-        await message.channel.send(maxon.get_response(text))
+        await message.channel.send("Pinged me?")
 
 
     await client.process_commands(message)
