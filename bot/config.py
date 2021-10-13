@@ -37,6 +37,7 @@ BDAY_LIST = [
                     "BRUH Happy Bday BSDK {}",]
 
 ROAST_LIST = [
+                    "Imma tie you up in a bori and throw you off da river!",
                     "",
                     "",
                     "",
@@ -48,5 +49,12 @@ ROAST_LIST = [
                     "",
                     "",
                     "",
-                    "",
-                    ]
+            ]
+
+MY_LOVE_LIST = [
+                    "Oh my love is one and only Mr HSK.",
+                    "This bot is already taken by that great personage.",
+                    "Twinkle twinkle little star, Try not to change my dear, I am there with you why to fear..",
+                    "Roses are red, violets are blue.. Oh you madafaka {} I totally love you.",
+                    "Roses are red violets are blue I totally forgot why I was talking to you."
+]

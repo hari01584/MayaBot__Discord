@@ -7,6 +7,7 @@ import random
 from config import FEELING_HORNY_LIST
 from config import BURN_LIGHT_LIST
 from config import BDAY_LIST
+from config import MY_LOVE_LIST
 
 class Naughty_Fun(commands.Cog):
     """Ahh we got some fun commands for ya!"""
@@ -53,3 +54,11 @@ class Naughty_Fun(commands.Cog):
         member = member or ctx.author
         #await ctx.send(random.choice(ROAST_LIST).format(member.name))
         await ctx.send("Coming Soon..")
+
+
+    @commands.command(name="love")
+    async def roast(self,ctx, *, member: discord.Member = None) :
+        """Maya is love goddess of virgins!"""
+
+        member = member or ctx.author
+        await ctx.send(random.choice(MY_LOVE_LIST).format(member.name))
