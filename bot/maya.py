@@ -7,6 +7,7 @@ from pretty_help import PrettyHelp
 
 
 from COG.Economy import Economy
+from COG.Games import Games
 from COG.Utility import Utility
 from COG.Naughty_Fun import Naughty_Fun
 
@@ -22,6 +23,7 @@ token = loadToken();
 # TODO: ADD ALL COG HERE!!
 
 client.add_cog(Economy(client))
+client.add_cog(Games(client))
 client.add_cog(Utility(client))
 client.add_cog(Naughty_Fun(client))
 
@@ -42,4 +44,8 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-client.run(token)
+from sys import exit
+try:
+    client.run(token)
+except KeyboardInterrupt:
+    exit()

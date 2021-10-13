@@ -10,4 +10,4 @@ class Economy(commands.Cog):
    @commands.command()
    async def bank(self, ctx):
        """Show your current balance!"""
-       await ctx.send("Pong!")
+       await ctx.send("Coming soon..")
