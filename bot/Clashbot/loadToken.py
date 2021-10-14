@@ -6,7 +6,7 @@ __location__ = os.path.realpath(
 
 def loadToken():
     if ENV_VARIABLE_NAME in os.environ:
-        return os.environ['token']
+        return os.environ[ENV_VARIABLE_NAME]
     else:
         file = open(os.path.join(__location__, SECRET_FILE_NAME),"r")
         token = file.read()
