@@ -1,7 +1,7 @@
 import requests
 import aiohttp
 import random
-
+import json
 # from .bot_accs import BOT_ACCS_LIST
 
 BOT_ACCS_LIST = [
@@ -10,7 +10,18 @@ BOT_ACCS_LIST = [
 ENDPOINT_LOGINSITE = "https://www.codingame.com/services/CodinGamer/loginSite"
 
 ENDPOINT_CLASH_PUBLIC = "https://www.codingame.com/services/ClashOfCode/playClash"
+ENDPOINT_CLASH_PRIVATE = "https://www.codingame.com/services/ClashOfCode/createPrivateClash"
+
 ENDPOINT_CLASH_LEAVE = "https://www.codingame.com/services/ClashOfCode/leaveClashByHandle"
+
+VALID_CLASH_LANGS = ['Bash', 'C', 'C#', 'C++', 'Clojure', 'D', 'Dart', 'F#', 'Go', 'Groovy', 'Haskell', 'Java', 'JavaScript', 'Kotlin', 'Lua', 'Objective-C', 'OCaml', 'Pascal', 'Perl', 'PHP', 'Python 3', 'Ruby', 'Rust', 'Scala', 'Swift', 'TypeScript', 'VB.NET', ]
+VALID_CLASH_MODES = ['FASTEST', 'SHORTEST', 'REVERSE']
+
+class InvalidLangException(Exception):
+    pass
+
+class InvalidModeException(Exception):
+    pass
 
 class ClashCodeAPI():    
     def __init__(self):
@@ -39,8 +50,32 @@ class ClashCodeAPI():
                 await self.leaveClashPublic(handle)
                 return res
             except Exception:
-                print(resp)
-                print("error debag data")
+                pass
+
+
+    async def getClashPrivate(self, langs=[], modes=[]):
+        for l in langs:
+            if l not in VALID_CLASH_LANGS:
+                raise InvalidLangException("invalid_lang")
+
+        for l in modes:
+            if l not in VALID_CLASH_MODES:
+                raise InvalidModeException("invalid_mode")
+
+        data = []
+        data.append(self.userId)
+        data.append(langs)
+        data.append(modes)
+
+        async with self.session.post(ENDPOINT_CLASH_PRIVATE, data=json.dumps(data)) as resp:
+            res = await resp.json()
+            try:
+                handle = res["publicHandle"]
+                return res
+            except Exception:
+                print(json.dumps(data))
+                print(res)
+                pass
 
     async def leaveClashPublic(self, handle):
         data = f'[{self.userId}, "{handle}"]'
