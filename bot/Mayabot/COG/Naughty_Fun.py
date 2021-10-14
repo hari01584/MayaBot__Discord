@@ -1,13 +1,13 @@
 import discord
 from discord.ext import commands
 
-from COG.Misc import getImFeeling
+from .Misc import getImFeeling
 
 import random
-from config import FEELING_HORNY_LIST
-from config import BURN_LIGHT_LIST
-from config import BDAY_LIST
-from config import MY_LOVE_LIST
+from ..config import FEELING_HORNY_LIST
+from ..config import BURN_LIGHT_LIST
+from ..config import BDAY_LIST
+from ..config import MY_LOVE_LIST
 
 class Naughty_Fun(commands.Cog):
     """Ahh we got some fun commands for ya!"""
