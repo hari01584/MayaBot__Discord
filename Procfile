@@ -1,1 +1,1 @@
-worker: python bot/maya.py
+worker: python bot/executor.py
